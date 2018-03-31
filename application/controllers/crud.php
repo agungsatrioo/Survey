@@ -68,9 +68,10 @@ class crud extends CI_Controller {
 	{
 		$this->load->model('Model');
 		$data = $this->Model->select();
+		$data2 = $this->db->count_all_results('survey');
 
 		$this->load->view('templates/header');
-		$this->load->view('dashboard',array('data' => $data));
+		$this->load->view('dashboard',array('data' => $data, 'data2' => $data2));
 		$this->load->view('templates/footer');
 	}
 

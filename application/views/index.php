@@ -6,7 +6,7 @@
 				<!-- Nama -->
 				<h4>Nama</h4>
 				<div class="mdl-textfield mdl-js-textfield">
-					<input class="mdl-textfield__input" name="nama" id="nama" type="text" pattern="-?[a-z]*(\.[A-Z]+)?">
+					<input class="mdl-textfield__input" name="nama" id="nama" type="text" pattern="-?[A-z]*(\.[A-Z]+)?">
 					<label class="mdl-textfield__label" for="nama">Masukan Nama</label>
 					<span class="mdl-textfield__error">Masukan nama yang benar</span>
 				</div>
@@ -596,9 +596,9 @@
 					</tr>
                 </table>
                 <br><br>
-				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="M.toast({html: 'Form di Reset'})" type="submit" name="submit"
+				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="" type="submit" name="submit"
 				value="Save">
-				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect onclick="M.toast({html: 'Form di Reset'})" type="reset" name="reset"
+				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="" type="reset" name="reset"
 				value="RESET">
 				<br>
 			</form>

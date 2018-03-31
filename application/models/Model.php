@@ -16,4 +16,5 @@
         {
             $this->db->query("DELETE FROM survey WHERE id=$id");
         }
+
     }

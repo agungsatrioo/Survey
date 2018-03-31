@@ -1,9 +1,88 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.material.min.css">
 <main class="mdl-layout__content mdl-color--grey-100">
 	<div class="mdl-grid demo-content">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+			<div class="mdl-grid demo-content">
+				<div style="text-align:center;">
+					<table>
+						<tr>
+							<td>
+								<br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Banyak Entry Data		
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h1><?php echo $data2;?></h1>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+			<div class="mdl-grid demo-content">
+				<div style="text-align:center;">
+					<table>
+						<tr>
+							<td><br></td>
+						</tr>
+						<tr>
+							<td>Indeks Nilai</td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+			<div class="mdl-grid demo-content">
+				<div style="text-align:center;">
+					<table>
+						<tr>
+							<td><br></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+			<div class="mdl-grid demo-content">
+				<div style="text-align:center;">
+					<table>
+						<tr>
+							<td><br></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
 		<div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
 			<table id="lihat" class="mdl-data-table mdl-js-data-table" width="100%">
 				<thead>
+					<tr>
+						<th colspan="5" class="mdl-data-table__cell--non-numeric">
+							<h4> Data Survey</h4>
+						</th>
+					</tr>
 					<tr>
 						<th width="10%" style="text-align:center;">NO</th>
 						<th width="30%" class="mdl-data-table__cell--non-numeric">Nama</th>
