@@ -79,7 +79,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Mudah</span></span>';
                                                                         else if($data['mudah'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Mudah</span></span>';
                                                                     ?>
                                 </td>
@@ -106,7 +106,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Sesuai</span></span>';
                                                                         else if($data['sesuai'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Sesuai</span></span>';
                                                                     ?>
                                 </td>
@@ -134,7 +134,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Pasti</span></span>';
                                                                         else if($data['pasti'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Pasti</span></span>';
                                                                     ?>
                                 </td>
@@ -161,7 +161,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Disiplin</span></span>';
                                                                         else if($data['disiplin'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Disiplin</span></span>';
                                                                     ?>
                                 </td>
@@ -184,7 +184,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Bertanggung Jawab</span></span>';
                                                                         else if($data['petugas'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Bertanggung Jawab</span></span>';
                                                                     ?>
                                 </td>
@@ -215,7 +215,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Mampu</span></span>';
                                                                         else if($data['mampu'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Mampu</span></span>';
                                                                     ?>
                                 </td>
@@ -242,7 +242,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Cepat</span></span>';
                                                                         else if($data['cepat'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Cepat</span></span>';
                                                                     ?>
                                 </td>
@@ -269,7 +269,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Adil</span></span>';
                                                                         else if($data['adil'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Adil</span></span>';
                                                                     ?>
                                 </td>
@@ -296,7 +296,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Sopan</span></span>';
                                                                         else if($data['sopan'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Sopan</span></span>';
                                                                     ?>
                                 </td>
@@ -323,7 +323,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Wajar</span></span>';
                                                                         else if($data['wajar'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Wajar</span></span>';
                                                                     ?>
                                 </td>
@@ -350,7 +350,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Sesuai</span></span>';
                                                                         else if($data['sesuai2'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Sesuai</span></span>';
                                                                     ?>
                                 </td>
@@ -377,7 +377,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Tepat</span></span>';
                                                                         else if($data['tepat'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Tepat</span></span>';
                                                                     ?>
                                 </td>
@@ -404,7 +404,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Nyaman</span></span>';
                                                                         else if($data['nyaman'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Nyaman</span></span>';
                                                                     ?>
                                 </td>
@@ -431,7 +431,7 @@
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
                                     <span class="mdl-chip__text">Aman</span></span>';
                                                                         else if($data['aman'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Aman</span></span>';
                                                                     ?>
                                 </td>

@@ -252,7 +252,7 @@
 				<h4>Bagaimana pendapat Saudara tentang kejelasan dan kepastian petugas dalam membantu pelayanan?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kejelasan_tidak_jelas">
 							<input class="mdl-radio__button" type="radio" name="kejelasan" id="kejelasan_tidak_jelas" value="1" required>
 							<span class="mdl_radio__label">Tidak Jelas</span>
 						</label>
@@ -260,7 +260,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kejelasan_kurang_jelas">
 							<input class="mdl-radio__button" type="radio" name="kejelasan" id="kejelasan_kurang_jelas" value="2" required>
 							<span class="mdl_radio__label">Kurang Jelas</span>
 						</label>
@@ -268,7 +268,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kejelasan_jelas">
 							<input class="mdl-radio__button" type="radio" name="kejelasan" id="kejelasan_jelas" value="3" required>
 							<span class="mdl_radio__label">Jelas</span>
 						</label>
@@ -276,7 +276,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kejelasan_sangat_jelas">
 							<input class="mdl-radio__button" type="radio" name="kejelasan" id="kejelasan_sangat_jelas" value="4" required>
 							<span class="mdl_radio__label">Sangat Jelas</span>
 						</label>
@@ -289,7 +289,7 @@
 				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kedisiplinan_tidak_disiplin">
-							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_tidak_displin" value="1" required>
+							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_tidak_disiplin" value="1" required>
 							<span class="mdl_radio__label">Tidak Disipin</span>
 						</label>
 					</td>
@@ -297,7 +297,7 @@
 				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kedisiplinan_kurang_disiplin">
-							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_kurang_displin" value="2" required>
+							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_kurang_disiplin" value="2" required>
 							<span class="mdl_radio__label">Kurang Disipin</span>
 						</label>
 					</td>
@@ -305,7 +305,7 @@
 				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kedisiplinan_disiplin">
-							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_displin" value="3" required>
+							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_disiplin" value="3" required>
 							<span class="mdl_radio__label">Disipin</span>
 						</label>
 					</td>
@@ -313,7 +313,7 @@
 				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kedisiplinan_sangat_disiplin">
-							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_sangat_displin" value="4" required>
+							<input class="mdl-radio__button" type="radio" name="kedisiplinan" id="kedisiplinan_sangat_disiplin" value="4" required>
 							<span class="mdl_radio__label">Sangat Disipin</span>
 						</label>
 					</td>
@@ -398,7 +398,7 @@
 				<h4>Bagaimana pendapat Saudara tentang kecepatan pelayanan di Kecamatan Cinambo ini?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kecepatan_tidak_cepat">
 							<input class="mdl-radio__button" type="radio" name="kecepatan" id="kecepatan_tidak_cepat" value="1" required>
 							<span class="mdl_radio__label"="kecepatan_tidak_cepat">Tidak Cepat</span>
 						</label>
@@ -406,7 +406,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kecepatan_kurang_cepat">
 							<input class="mdl-radio__button" type="radio" name="kecepatan" id="kecepatan_kurang_cepat" value="2" required>
 							<span class="mdl_radio__label"="kecepatan_kurang_cepat">Kurang Cepat</span>
 						</label>
@@ -414,7 +414,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kecepatan_cepat">
 							<input class="mdl-radio__button" type="radio" name="kecepatan" id="kecepatan_cepat" value="3" required>
 							<span class="mdl_radio__label"="kecepatan_cepat">Cepat</span>
 						</label>
@@ -422,7 +422,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kecepatan_sangat_cepat">
 							<input class="mdl-radio__button" type="radio" name="kecepatan" id="kecepatan_sangat_cepat" value="4" required>
 							<span class="mdl_radio__label"="kecepatan_sangat_cepat">Sangat Cepat</span>
 						</label>
@@ -434,7 +434,7 @@
 				<h4>Bagaimana pendapat Saudara tentang keadilan untuk mendapatkan pelayanan di Kecamatan Cinambo ini?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_tidak_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_tidak_adil" value="1" required>
 							<span class="mdl_radio__label"="keadilan_tidak_adil">Tidak Adil</span>
 						</label>
@@ -442,7 +442,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_kurang_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_kurang_adil" value="2" required>
 							<span class="mdl_radio__label"="keadilan_kurang_adil">Kurang Adil</span>
 						</label>
@@ -450,7 +450,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_adil" value="3" required>
 							<span class="mdl_radio__label"="keadilan_adil">Adil</span>
 						</label>
@@ -458,7 +458,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_sangat_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_sangat_adil" value="4" required>
 							<span class="mdl_radio__label"="keadilan_sangat_adil">Sangat Adil</span>
 						</label>
@@ -470,7 +470,7 @@
 				<h4>Bagaimana pendapat Saudara tentang kesopanan dan keramahan dalam mendapatkan pelayanan?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesopanan_tidak_sopan">
 							<input class="mdl-radio__button" type="radio" name="kesopanan" id="kesopanan_tidak_sopan" value="1" required>
 							<span class="mdl_radio__label"="kesopanan_tidak_sopan">Tidak Sopan dan Ramah</span>
 						</label>
@@ -478,7 +478,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesopanan_kurang_sopan">
 							<input class="mdl-radio__button" type="radio" name="kesopanan" id="kesopanan_kurang_sopan" value="2" required>
 							<span class="mdl_radio__label"="kesopanan_kurang_sopan">Kurang Sopan dan Ramah</span>
 						</label>
@@ -486,7 +486,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesopanan_sopan">
 							<input class="mdl-radio__button" type="radio" name="kesopanan" id="kesopanan_sopan" value="3" required>
 							<span class="mdl_radio__label"="kesopanan_sopan">Sopan dan Ramah</span>
 						</label>
@@ -494,7 +494,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesopanan_sangat_sopan">
 							<input class="mdl-radio__button" type="radio" name="kesopanan" id="kesopanan_sangat_sopan" value="4" required>
 							<span class="mdl_radio__label"="kesopanan_sangat_sopan">Sangat Sopan dan Ramah</span>
 						</label>
@@ -506,7 +506,7 @@
 				<h4>Bagaimana pendapat Saudara tentang kewajaran biaya untuk mendapatkan pelayanan?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kewajaran_tidak_wajar">
 							<input class="mdl-radio__button" type="radio" name="kewajaran" id="kewajaran_tidak_wajar" value="1" required>
 							<span class="mdl_radio__label"="kewajaran_tidak_wajar">Tidak Wajar</span>
 						</label>
@@ -514,7 +514,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kewajaran_kurang_wajar">
 							<input class="mdl-radio__button" type="radio" name="kewajaran" id="kewajaran_kurang_wajar" value="2" required>
 							<span class="mdl_radio__label"="kewajaran_kurang_wajar">Kurang Wajar</span>
 						</label>
@@ -522,7 +522,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kewajaran_wajar">
 							<input class="mdl-radio__button" type="radio" name="kewajaran" id="kewajaran_wajar" value="3" required>
 							<span class="mdl_radio__label"="kewajaran_wajar">Wajar</span>
 						</label>
@@ -530,7 +530,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kewajaran_sangat_wajar">
 							<input class="mdl-radio__button" type="radio" name="kewajaran" id="kewajaran_sangat_wajar" value="4" required>
 							<span class="mdl_radio__label"="kewajaran_sangat_wajar">Sangat Wajar</span>
 						</label>
@@ -542,7 +542,7 @@
 				<h4>Bagaimana pendapat Saudara tentang kesesuaian antara biaya yang dibayarkan dengan biaya yang telah ditetapkan?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesesuaian_tidak_sesuai">
 							<input class="mdl-radio__button" type="radio" name="kesesuaian2" id="kesesuaian_tidak_sesuai" value="1" required>
 							<span class="mdl_radio__label"="kesesuaian_tidak_sesuai">Selalu Tidak Sesuai</span>
 						</label>
@@ -550,7 +550,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesesuaian_kurang_sesuai">
 							<input class="mdl-radio__button" type="radio" name="kesesuaian2" id="kesesuaian_kurang_sesuai" value="2" required>
 							<span class="mdl_radio__label"="kesesuaian_kurang_sesuai">Kadang-kadang Kurang Sesuai</span>
 						</label>
@@ -558,7 +558,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesesuaian_sesuai">
 							<input class="mdl-radio__button" type="radio" name="kesesuaian2" id="kesesuaian_sesuai" value="3" required>
 							<span class="mdl_radio__label"="kesesuaian_sesuai">Banyak Sesuai</span>
 						</label>
@@ -566,7 +566,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesesuaian_sangat_kesesuaian">
 							<input class="mdl-radio__button" type="radio" name="kesesuaian2" id="kesesuaian_sangat_kesesuaian" value="4" required>
 							<span class="mdl_radio__label"="kesesuaian_sangat_kesesuaian">Selalu Sesuai</span>
 						</label>
@@ -578,7 +578,7 @@
 				<h4>Bagaimana pendapat Saudara tentang ketepatan pelaksanaan terhadap jadwal waktu pelaksanaan?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ketepatan_tidak_tepat">
 							<input class="mdl-radio__button" type="radio" name="ketepatan" id="ketepatan_tidak_tepat" value="1" required>
 							<span class="mdl_radio__label"="ketepatan_tidak_tepat">Selalu Tidak Tepat</span>
 						</label>
@@ -586,7 +586,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ketepatan_kurang_tepat">
 							<input class="mdl-radio__button" type="radio" name="ketepatan" id="ketepatan_kurang_tepat" value="2" required>
 							<span class="mdl_radio__label"="ketepatan_kurang_tepat">Kadang-kadang Tepat</span>
 						</label>
@@ -594,7 +594,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ketepatan_tepat">
 							<input class="mdl-radio__button" type="radio" name="ketepatan" id="ketepatan_tepat" value="3" required>
 							<span class="mdl_radio__label"="ketepatan_tepat">Banyak Tepat</span>
 						</label>
@@ -602,7 +602,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ketepatan_sangat_tepat">
 							<input class="mdl-radio__button" type="radio" name="ketepatan" id="ketepatan_sangat_tepat" value="4" required>
 							<span class="mdl_radio__label"="ketepatan_sangat_tepat">Selalu Tepat</span>
 						</label>
@@ -614,7 +614,7 @@
 				<h4>Bagaimana pendapat Saudara tentang kenyamanan di lingkungan Kecamatan Cinambo?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kenyamanan_tidak_nyaman">
 							<input class="mdl-radio__button" type="radio" name="kenyamanan" id="kenyamanan_tidak_nyaman" value="1" required>
 							<span class="mdl_radio__label"="kenyamanan_tidak_nyaman">Tidak Nyaman</span>
 						</label>
@@ -622,7 +622,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kenyamanan_kurang_nyaman">
 							<input class="mdl-radio__button" type="radio" name="kenyamanan" id="kenyamanan_kurang_nyaman" value="2" required>
 							<span class="mdl_radio__label"="kenyamanan_kurang_nyaman">Kurang Nyaman</span>
 						</label>
@@ -630,7 +630,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kenyamanan_nyaman">
 							<input class="mdl-radio__button" type="radio" name="kenyamanan" id="kenyamanan_nyaman" value="3" required>
 							<span class="mdl_radio__label"="kenyamanan_nyaman">Nyaman</span>
 						</label>
@@ -638,7 +638,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kenyamanan_sangat_nyaman">
 							<input class="mdl-radio__button" type="radio" name="kenyamanan" id="kenyamanan_sangat_nyaman" value="4" required>
 							<span class="mdl_radio__label"="kenyamanan_sangat_nyaman">Sangat Nyaman</span>
 						</label>
@@ -650,7 +650,7 @@
 				<h4>Bagaimana pendapat Saudara tentang keamanan pelayanan di Kecamatan Cinambo?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keamanan_tidak_aman">
 							<input class="mdl-radio__button" type="radio" name="keamanan" id="keamanan_tidak_aman" value="1" required>
 							<span class="mdl_radio__label"="keamanan_tidak_aman">Tidak Aman</span>
 						</label>
@@ -658,7 +658,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keamanan_kurang_aman">
 							<input class="mdl-radio__button" type="radio" name="keamanan" id="keamanan_kurang_aman" value="2" required>
 							<span class="mdl_radio__label"="keamanan_kurang_aman">Kurang Aman</span>
 						</label>
@@ -666,7 +666,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keamanan_aman">
 							<input class="mdl-radio__button" type="radio" name="keamanan" id="keamanan_aman" value="3" required>
 							<span class="mdl_radio__label"="keamanan_aman">Aman</span>
 						</label>
@@ -674,7 +674,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keamanan_sangat_aman">
 							<input class="mdl-radio__button" type="radio" name="keamanan" id="keamanan_sangat_aman" value="4" required>
 							<span class="mdl_radio__label"="keamanan_sangat_aman">Sangat Aman</span>
 						</label>

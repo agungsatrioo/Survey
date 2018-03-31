@@ -16,6 +16,7 @@ class crud extends CI_Controller {
 
 	public function tambah_data()
 	{
+
 		$nama 			= $_POST['nama'];
 		$umur			= $_POST['umur'];
 		$jk 			= $_POST['jk'];
@@ -37,16 +38,16 @@ class crud extends CI_Controller {
 		$keamanan 		= $_POST['keamanan'];
 
 		$data = array(
-			'nama' 			=> $nama,
-			'umur'			=> $umur,
-			'jk' 			=> $jk,
-			'pt' 			=> $pt,
-			'pu' 			=> $pu,
-			'mudah' 		=> $pe,
+			'nama' 		=> $nama,
+			'umur'		=> $umur,
+			'jk' 		=> $jk,
+			'pt' 		=> $pt,
+			'pu' 		=> $pu,
+			'mudah' 	=> $pe,
 			'sesuai' 	=> $kesesuaian,
 			'pasti' 	=> $kejelasan,
 			'disiplin' 	=> $kedisiplinan,
-			'petugas' 		=> $petugas,
+			'petugas' 	=> $petugas,
 			'mampu' 	=> $pelayanan,
 			'cepat' 	=> $kecepatan,
 			'adil' 		=> $keadilan,
@@ -67,9 +68,9 @@ class crud extends CI_Controller {
 	public function lihat_data()
 	{
 		$this->load->model('Model');
-		$data = $this->Model->select();
-		$data2 = $this->db->count_all_results('survey');
-
+		$data	= $this->Model->select();
+		$data2	= $this->db->count_all('survey');
+		
 		$this->load->view('templates/header');
 		$this->load->view('dashboard',array('data' => $data, 'data2' => $data2));
 		$this->load->view('templates/footer');
@@ -93,8 +94,6 @@ class crud extends CI_Controller {
 		$this->Model->delete_where($id);
 		$data = $this->Model->select();
 
-		$this->load->view('templates/header');
-		$this->load->view('dashboard',array('data' => $data));
-		$this->load->view('templates/footer');
+		redirect(base_url().'index.php/crud/lihat_data');
 	}
 }
