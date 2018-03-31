@@ -249,7 +249,7 @@
 			</table>
 			<br>
 			<table>
-				<h4>Bagaimana pendapat Saudara tentang kejelasan persyaratan pelayanan dengan jenis pelayanannya?</h4>
+				<h4>Bagaimana pendapat Saudara tentang kejelasan dan kepastian petugas dalam membantu pelayanan?</h4>
 				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
@@ -321,7 +321,7 @@
 			</table>
 			<br>
 			<table>
-				<h4>Bagaimana pendapat Saudara tentang kemampuan petugas dalam memberikan pelayanan?</h4>
+				<h4>Bagaimana pendapat Saudara tentang tanggung jawab petugas dalam memberikan pelayanan?</h4>
 				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="petugas_tidak_bertanggung_jawab">
@@ -329,18 +329,24 @@
 							<span class="mdl_radio__label">Tidak Bertanggung Jawab</span>
 						</label>
 					</td>
+				</tr>
+				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="petugas_kurang_bertanggung_jawab">
 							<input class="mdl-radio__button" type="radio" name="petugas" id="petugas_kurang_bertanggung_jawab" value="2" required>
 							<span class="mdl_radio__label">Kurang Bertanggung Jawab</span>
 						</label>
 					</td>
+				</tr>
+				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="petugas_bertanggung_jawab">
 							<input class="mdl-radio__button" type="radio" name="petugas" id="petugas_bertanggung_jawab" value="3" required>
 							<span class="mdl_radio__label">Bertanggung Jawab</span>
 						</label>
 					</td>
+				</tr>
+				<tr>
 					<td>
 						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="petugas_sangat_bertanggung_jawab">
 							<input class="mdl-radio__button" type="radio" name="petugas" id="petugas_sangat_bertanggung_jawab" value="4" required>
