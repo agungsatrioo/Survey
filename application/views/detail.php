@@ -15,7 +15,7 @@
 <main class="mdl-layout__content mdl-color--grey-100">
 	<div class="mdl-grid demo-content">
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col" style="height:20%;">
-			<div class="mdl-card__title mdl-color--light-blue-900">
+			<div class="mdl-card__title mdl-color--blue-grey-600 ">
 				<h2 class="mdl-card__title-text">
 					<?php echo $data['nama']; ?>
 				</h2>
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--9-col">
-			<div class="mdl-card__title mdl-color--light-blue-900">
+			<div class="mdl-card__title mdl-color--blue-grey-900">
 				<h2 class="mdl-card__title-text">Hasil Survey</h2>
 			</div>
 			<div class="mdl-card__supporting-text">

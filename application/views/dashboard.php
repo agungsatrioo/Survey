@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.material.min.css">
 <main class="mdl-layout__content mdl-color--grey-100">
 	<div class="mdl-grid demo-content">
-		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -12,7 +12,7 @@
 						</tr>
 						<tr>
 							<td>
-								Banyak Entry Data		
+								TOTAL ENTRY		
 							</td>
 						</tr>
 						<tr>
@@ -24,7 +24,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -32,7 +32,7 @@
 							<td><br></td>
 						</tr>
 						<tr>
-							<td>Indeks Nilai</td>
+							<td>INDEKS NILAI</td>
 						</tr>
 						<tr>
 							<td></td>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -58,7 +58,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -108,10 +108,10 @@
 							<?php echo $data['jk']?>
 						</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<a class="class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"" href="<?php echo base_url().'index.php/crud/detail_data/'.$data['id']?>">
+							<a class="mdl-color-text--blue-grey-500" href="<?php echo base_url().'index.php/crud/detail_data/'.$data['id']?>">
 								<i class="material-icons">launch</i>
 							</a>
-							<a class="class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"" href="<?php echo base_url().'index.php/crud/delete_data/'.$data['id']?>">
+							<a class="mdl-color-text--blue-grey-500" href="<?php echo base_url().'index.php/crud/delete_data/'.$data['id']?>">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>
