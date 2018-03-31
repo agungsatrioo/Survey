@@ -85,7 +85,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -112,7 +112,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -140,7 +140,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -167,7 +167,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -194,12 +194,12 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
                                 <td>
-                                    <h4>Kemampuan petugas dalam memberikan pelayana</h4>
+                                    <h4>Kemampuan petugas dalam memberikan pelayanan</h4>
                                 </td>
                             </tr>
                             <tr>
@@ -221,7 +221,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -248,7 +248,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -275,7 +275,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -302,7 +302,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -329,7 +329,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -356,7 +356,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -383,7 +383,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
@@ -410,7 +410,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br><hr>
                     <li class="mdl-list__item">
                         <table>
                             <tr>
