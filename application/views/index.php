@@ -237,7 +237,7 @@
 				</table>
 				<br>
 				<table>
-                    <h4>Bagaimana pendapat Saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya?</h4>
+                    <h4>Bagaimana pendapat Saudara tentang kejelasan persyaratan pelayanan dengan jenis pelayanannya?</h4>
 					<tr>
 						<td>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="">
@@ -596,10 +596,10 @@
 					</tr>
                 </table>
                 <br><br>
-				<input class="mdl-button mdl-js-button mdl-button--raised" onclick="M.toast({html: 'Form di Reset'})" type="submit" name="submit"
-				value="Save" class="btn waves-effect waves-light">
-				<input class="mdl-button mdl-js-button mdl-button--raised" onclick="M.toast({html: 'Form di Reset'})" type="reset" name="reset"
-				value="RESET" class="btn waves-effect waves-light red">
+				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="M.toast({html: 'Form di Reset'})" type="submit" name="submit"
+				value="Save">
+				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect onclick="M.toast({html: 'Form di Reset'})" type="reset" name="reset"
+				value="RESET">
 				<br>
 			</form>
 		</div>
