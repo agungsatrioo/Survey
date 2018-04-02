@@ -18,7 +18,13 @@
 						</tr>
 						<tr>
 							<td>
-								<h1><?php echo $data2;?></h1>
+								<h1>
+									<?php 
+										if($data2 != 0){
+											echo $data2;
+										}
+									?>
+								</h1>
 							</td>
 						</tr>
 					</table>
@@ -36,11 +42,13 @@
 							<td><h5>INDEKS NILAI</h5></td>
 						</tr>
 						<tr>
-                            <td><h1><?php 
-                                            foreach($nilai as $nilais){
-                                                $nil=round($nilais['jumlahdata']/(14*$data2),2); 
-                                                echo $nil;  
-                                            }
+							<td><h1><?php 
+										if($data2 != 0){
+											foreach($nilai as $nilais){
+												$nil=round($nilais['jumlahdata']/(14*$data2),2); 
+												echo $nil;  
+											}
+										}
                                     ?>
                                 </h1></td>
 						</tr>
@@ -59,24 +67,26 @@
 							<td><h5>INDEKS NILAI</h5></td>
 						</tr>
 						<tr>
-                            <td><h1><?php
-                                if($nil > 1.00 && $nil <= 2.5996){
-                                    $mutu = "D";
-                                    $kinerja = "Tidak Baik";
-                                }
-                                else if($nil > 2.6 && $nil <= 3.064){
-                                    $mutu = "C";
-                                    $kinerja = "Kurang Baik";
-                                }
-                                else if($nil > 3.0644 && $nil <= 3.532){
-                                    $mutu = "B";
-                                    $kinerja = "Baik";
-                                }
-                                else if($nil > 3.5324 && $nil <= 4.00){
-                                    $mutu = "A";
-                                    $kinerja = "Sangat Baik";
-                                }
-                                echo $mutu;
+							<td><h1><?php
+								if($data2 != 0){
+									if($nil > 1.00 && $nil <= 2.5996){
+										$mutu = "D";
+										$kinerja = "Tidak Baik";
+									}
+									else if($nil > 2.6 && $nil <= 3.064){
+										$mutu = "C";
+										$kinerja = "Kurang Baik";
+									}
+									else if($nil > 3.0644 && $nil <= 3.532){
+										$mutu = "B";
+										$kinerja = "Baik";
+									}
+									else if($nil > 3.5324 && $nil <= 4.00){
+										$mutu = "A";
+										$kinerja = "Sangat Baik";
+									}
+									echo $mutu;
+								}
                             ?></h1></td>
 						</tr>
 					</table>
@@ -94,8 +104,10 @@
 							<td><h5>INDEKS NILAI</h5></td>
 						</tr>
 						<tr>
-                            <td><h1><?php
-                                echo $kinerja;
+							<td><h1><?php
+								if($data2 != 0){
+									echo $kinerja;
+								}
                             ?></h1></td>
 						</tr>
 					</table>
