@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.material.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script> 
 <main class="mdl-layout__content mdl-color--grey-100">
 	<div class="mdl-grid demo-content">
-		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -12,7 +13,7 @@
 						</tr>
 						<tr>
 							<td>
-								TOTAL ENTRY		
+								<h5>TOTAL ENTRY</h5>
 							</td>
 						</tr>
 						<tr>
@@ -24,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -32,16 +33,22 @@
 							<td><br></td>
 						</tr>
 						<tr>
-							<td>INDEKS NILAI</td>
+							<td><h5>INDEKS NILAI</h5></td>
 						</tr>
 						<tr>
-							<td></td>
+                            <td><h1><?php 
+                                            foreach($nilai as $nilais){
+                                                $nil=round($nilais['jumlahdata']/(14*$data2),2); 
+                                                echo $nil;  
+                                            }
+                                    ?>
+                                </h1></td>
 						</tr>
 					</table>
 				</div>
 			</div>
 		</div>
-		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
+        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -49,16 +56,34 @@
 							<td><br></td>
 						</tr>
 						<tr>
-							<td></td>
+							<td><h5>INDEKS NILAI</h5></td>
 						</tr>
 						<tr>
-							<td></td>
+                            <td><h1><?php
+                                if($nil > 1.00 && $nil <= 2.5996){
+                                    $mutu = "D";
+                                    $kinerja = "Tidak Baik";
+                                }
+                                else if($nil > 2.6 && $nil <= 3.064){
+                                    $mutu = "C";
+                                    $kinerja = "Kurang Baik";
+                                }
+                                else if($nil > 3.0644 && $nil <= 3.532){
+                                    $mutu = "B";
+                                    $kinerja = "Baik";
+                                }
+                                else if($nil > 3.5324 && $nil <= 4.00){
+                                    $mutu = "A";
+                                    $kinerja = "Sangat Baik";
+                                }
+                                echo $mutu;
+                            ?></h1></td>
 						</tr>
 					</table>
 				</div>
 			</div>
 		</div>
-		<div class="mdl-card mdl-shadow--2dp mdl-color--indigo-800 mdl-color-text--blue-grey-100 mdl-cell mdl-cell--3-col">
+        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
@@ -66,10 +91,12 @@
 							<td><br></td>
 						</tr>
 						<tr>
-							<td></td>
+							<td><h5>INDEKS NILAI</h5></td>
 						</tr>
 						<tr>
-							<td></td>
+                            <td><h1><?php
+                                echo $kinerja;
+                            ?></h1></td>
 						</tr>
 					</table>
 				</div>
@@ -120,8 +147,52 @@
 				</tbody>
 			</table>
 		</div>
+		<div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
+			<canvas id="myChart" width="400" height="400"></canvas>
+			<script>
+				var ctx = document.getElementById("myChart").getContext('2d');
+				var myChart = new Chart(ctx, {
+					type: 'bar',
+					data: {
+						labels: ["Kemudahan Prosedur", "Kesesuaian Persyaratan", "Kejelasan dan Kepastian Petugas", "Kedisiplinan Petugas", "Tanggung Jawab Petugas", "Kemampuan Petugas"],
+						datasets: [{
+							label: '# of Votes',
+							data: [12, 19, 3, 5, 2, 3],
+							backgroundColor: [
+								'rgba(255, 99, 132, 0.2)',
+								'rgba(54, 162, 235, 0.2)',
+								'rgba(255, 206, 86, 0.2)',
+								'rgba(75, 192, 192, 0.2)',
+								'rgba(153, 102, 255, 0.2)',
+								'rgba(255, 159, 64, 0.2)'
+							],
+							borderColor: [
+								'rgba(255,99,132,1)',
+								'rgba(54, 162, 235, 1)',
+								'rgba(255, 206, 86, 1)',
+								'rgba(75, 192, 192, 1)',
+								'rgba(153, 102, 255, 1)',
+								'rgba(255, 159, 64, 1)'
+							],
+							borderWidth: 1
+						}]
+					},
+					options: {
+						scales: {
+							yAxes: [{
+								ticks: {
+									beginAtZero:true
+								}
+							}]
+						}
+					}
+				});
+			</script>
+		</div>	
 	</div>
+
 </main>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js"></script>

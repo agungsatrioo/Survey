@@ -10,12 +10,11 @@
 
 </style>
 
-
 <?php foreach($data as $data){ ?>
 <main class="mdl-layout__content mdl-color--grey-100">
 	<div class="mdl-grid demo-content">
-		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col" style="height:20%;">
-			<div class="mdl-card__title mdl-color--blue-grey-600 ">
+		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+			<div class="mdl-card__title mdl-color--blue-grey-900 ">
 				<h2 class="mdl-card__title-text">
 					<?php echo $data['nama']; ?>
 				</h2>
@@ -53,7 +52,84 @@
 				</table>
 			</div>
 		</div>
-		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col">
+        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
+			<div class="mdl-grid demo-content">
+				<div style="text-align:center;">
+					<table>
+						<tr>
+							<td><br></td>
+						</tr>
+						<tr>
+							<td><h5>INDEKS NILAI</h5></td>
+						</tr>
+						<tr>
+                            <td><h1><?php 
+                                            foreach($nilai as $nilais){
+                                                $nil=round($nilais['jumlahdata']/14,2); 
+                                                echo $nil;  
+                                            }
+                                    ?>
+                                </h1></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
+			<div class="mdl-grid demo-content">
+				<div style="text-align:center;">
+					<table>
+						<tr>
+							<td><br></td>
+						</tr>
+						<tr>
+							<td><h5>INDEKS NILAI</h5></td>
+						</tr>
+						<tr>
+                            <td><h1><?php
+                                if($nil > 1.00 && $nil <= 2.5996){
+                                    $mutu = "D";
+                                    $kinerja = "Tidak Baik";
+                                }
+                                else if($nil > 2.6 && $nil <= 3.064){
+                                    $mutu = "C";
+                                    $kinerja = "Kurang Baik";
+                                }
+                                else if($nil > 3.0644 && $nil <= 3.532){
+                                    $mutu = "B";
+                                    $kinerja = "Baik";
+                                }
+                                else if($nil > 3.5324 && $nil <= 4.00){
+                                    $mutu = "A";
+                                    $kinerja = "Sangat Baik";
+                                }
+                                echo $mutu;
+                            ?></h1></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
+			<div class="mdl-grid demo-content">
+				<div style="text-align:center;">
+					<table>
+						<tr>
+							<td><br></td>
+						</tr>
+						<tr>
+							<td><h5>INDEKS NILAI</h5></td>
+						</tr>
+						<tr>
+                            <td><h1><?php
+                                echo $kinerja;
+                            ?></h1></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
 			<div class="mdl-card__title mdl-color--blue-grey-900">
                 <h2 class="mdl-card__title-text">Hasil Survey</h2>
 			</div>

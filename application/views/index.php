@@ -1,6 +1,6 @@
 <main class="mdl-layout__content mdl-color--grey-100">
 	<div class="mdl-grid demo-content">
-		<div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col" style="height:0%;">
+		<div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" style="height:0%;">
 			<!-- Input Data -->
 			<form action="<?php echo base_url();?>index.php/crud/tambah_data" method="post">
 				<!-- Nama -->
@@ -10,7 +10,6 @@
 					<label class="mdl-textfield__label" for="nama">Masukan Nama</label>
 					<span class="mdl-textfield__error">Masukan nama yang benar</span>
 				</div>
-				<br>
 
 				<!-- Umur -->
 				<h4>Umur</h4>
@@ -174,8 +173,7 @@
 						</td>
 					</tr>
 				</table>
-		</div>
-		<div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+		
 			<table>
 				<h4>Bagaimana pemahaman Saudara tentang kemudahan prosedur/pelayanan di Kecamatan Cinambo?</h4>
 				<tr>
