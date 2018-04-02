@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.material.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script> 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>  -->
 <main class="mdl-layout__content mdl-color--grey-100">
 	<div class="mdl-grid demo-content">
 		<div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
@@ -147,7 +147,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
+		<!-- <div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col">
 			<canvas id="myChart" width="400" height="400"></canvas>
 			<script>
 				var ctx = document.getElementById("myChart").getContext('2d');
@@ -188,7 +188,7 @@
 					}
 				});
 			</script>
-		</div>	
+		</div>	 -->
 	</div>
 
 </main>
