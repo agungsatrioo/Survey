@@ -434,7 +434,7 @@
 				<h4>Bagaimana pendapat Saudara tentang keadilan untuk mendapatkan pelayanan di Kecamatan Cinambo ini?</h4>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_tidak_adil">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keadilan_tidak_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_tidak_adil" value="1" required>
 							<span class="mdl_radio__label"="keadilan_tidak_adil">Tidak Adil</span>
 						</label>
@@ -442,7 +442,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_kurang_adil">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keadilan_kurang_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_kurang_adil" value="2" required>
 							<span class="mdl_radio__label"="keadilan_kurang_adil">Kurang Adil</span>
 						</label>
@@ -450,7 +450,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_adil">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keadilan_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_adil" value="3" required>
 							<span class="mdl_radio__label"="keadilan_adil">Adil</span>
 						</label>
@@ -458,7 +458,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Keadilan_sangat_adil">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keadilan_sangat_adil">
 							<input class="mdl-radio__button" type="radio" name="keadilan" id="keadilan_sangat_adil" value="4" required>
 							<span class="mdl_radio__label"="keadilan_sangat_adil">Sangat Adil</span>
 						</label>
