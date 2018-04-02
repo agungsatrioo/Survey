@@ -6,7 +6,7 @@
 				<!-- Nama -->
 				<h4>Nama</h4>
 				<div class="mdl-textfield mdl-js-textfield">
-					<input class="mdl-textfield__input" name="nama" id="nama" type="text" pattern="-?[A-z]*(\.[A-Z]+)?">
+					<input class="mdl-textfield__input" name="nama" id="nama" type="text" pattern="([A-z\s]){2,}">
 					<label class="mdl-textfield__label" for="nama">Masukan Nama</label>
 					<span class="mdl-textfield__error">Masukan nama yang benar</span>
 				</div>
