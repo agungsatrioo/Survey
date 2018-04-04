@@ -13,20 +13,27 @@ class c_login extends CI_Controller {
 	}
 	
 	public function auth(){
-		$username=htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
-		$password=htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
-
-		$cek = $this->m_login->auth($username, md5($password));
+		$username	= htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
+		$password	= htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
+		$level		= $this->m_login->level($username);
+		$cek 		= $this->m_login->auth($username, $password);
 
 		if($cek->num_rows() > 0){
-			$data=$cek_dosen->row_array();
+			$data=$cek->row_array();
 			$this->session->set_userdata('masuk',TRUE);
-			
-			$this->session->set_userdata('akses','1');
 			$this->session->set_userdata('ses_username',$data['username']);
+			if($level == 1){
+				$this->session->set_userdata('akses','1');
+				redirect(base_url().'index.php/c_crud/lihat_data');
+			}else{
+				$this->session->set_userdata('akses','2');
+				$this->load->view('user/v_input');
+			}
 
-			redirect(base_url().'index.php/c_crud/lihat_data');
-        }
+        }else{
+			echo "<script>alert('Data tidak ada!');</script>";
+			$this->load->view('index');
+		}
 	}
 
 	public function create(){

@@ -20,49 +20,110 @@
 	<link href="<?php echo base_url();?>assets/css/icon.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/material.min.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/styles.css">
+	<style>
+		body {
+			background-color: #ddd;
+		}
+
+		.container {
+			position: absolute;
+			left: 50%;
+			top: 40px;
+			transform: translate(-50%, 0);
+			perspective: 1000px;
+			width: 330px;
+			height: 375px;
+		}
+
+		#cube {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transform-style: preserve-3d;
+		}
+
+		#cube figure {
+			backface-visibility: hidden;
+			margin: 0;
+			width: 330px;
+			height: 375px;
+			display: block;
+			position: absolute;
+		}
+
+		#cube .front {
+			transform: rotateY(0deg) translateZ(187.5px);
+		}
+
+		#cube .left {
+			transform: rotateY(-90deg) translateZ(165px) translateX(22.5px);
+		}
+
+		#cube .bottom {
+			transform: rotateX(-90deg) translateZ(187.5px);
+		}
+
+		#cube {
+			transform: translateZ(-165px);
+		}
+
+		#cube {
+			transition: transform .4s;
+		}
+
+		.mdl-card {
+			width: 330px;
+			height: 375px;
+		}
+
+		.mdl-card__title .mdl-button--icon {
+			height: 28px;
+			width: 28px;
+			min-width: 28px;
+		}
+
+		.mdl-textfield__label {
+			color: rgba(0, 0, 0, 0.5);
+		}
+
+		a:hover {
+			cursor: pointer;
+		}
+
+	</style>
+	<script src="<?php echo base_url();?>assets/js/material.min.js"></script>
 </head>
 
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
-		<main class="mdl-layout__content">
-			<div class="mdl-card mdl-shadow--6dp">
-				<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-					<h2 class="mdl-card__title-text">SISTIK</h2>
-				</div>
-				<div class="mdl-card__supporting-text">
-					<form action="<?php echo base_url();?>index.php/c_login/auth" method="post">
-						<div class="mdl-textfield mdl-js-textfield">
-							<input class="mdl-textfield__input" type="text" id="username" />
-							<label class="mdl-textfield__label" for="username">Username</label>
+	<div class="mdl-layout mdl-js-layout">
+		<section class="container">
+			<div id="cube" class="show-front">
+				<figure class="front">
+					<div class="mdl-card mdl-shadow--6dp">
+						<div class="mdl-card__title mdl-color--primary mdl-color-text--white relative">
+							<br><br><br><br><br><br>
+							<h2 class="mdl-card__title-text">LOGIN SISTIK</h2>
 						</div>
-						<div class="mdl-textfield mdl-js-textfield">
-							<input class="mdl-textfield__input" type="password" id="userpass" />
-							<label class="mdl-textfield__label" for="userpass">Password</label>
+
+						<div class="mdl-card__supporting-text">
+							<form action="<?php echo base_url();?>index.php/c_login/auth" method="post">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" id="login" name="username"/>
+								<label class="mdl-textfield__label" for="login">Username</label>
+							</div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="password" id="password" name="password"/>
+								<label class="mdl-textfield__label" for="password">Password</label>
+							</div><br><br>
+							<button type="submit" name="submit" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+								Login
+							</button>
 						</div>
-					</form>
-				</div>
-				<div class="mdl-card__actions mdl-card--border">
-					<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Log in</button>
-				</div>
+					</div>
+				</figure>
 			</div>
-		</main>
+		</section>
 	</div>
-	<main>
-	
-		<!-- <div>
-			<form action="<?php echo base_url();?>index.php/c_login/create" method="post">
-				<div>
-					<input type="text" name="username" placeholder="username">
-					<input type="password" name="password" placeholder="password">
-					<select name="level" id="">
-						<option value="1">Admin</option>
-						<option value="2">User</option>
-					</select>
-					<input type="submit" name="submit" value="Sign Up">
-				</div>
-			</form>
-		</div>
-	</main> -->
 </body>
 
 </html>
