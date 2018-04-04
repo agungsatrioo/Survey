@@ -27,7 +27,7 @@ class c_login extends CI_Controller {
 				redirect(base_url().'index.php/c_crud/lihat_data');
 			}
         }else{
-			echo "<script>alert('Data tidak ada!');</script>";
+			echo "<script>alert('Username atau Password Salah!');</script>";
 			$this->load->view('index');
 		}
 	}
@@ -50,7 +50,7 @@ class c_login extends CI_Controller {
 
 	public function logout(){
 		$this->session->sess_destroy();
-        $url=base_url('');
+        $url=base_url('index.php/c_login/');
         redirect($url);
 	}
 }
