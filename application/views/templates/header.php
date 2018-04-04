@@ -8,29 +8,15 @@
 	<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<title>SISTIK</title>
-
-	<!-- Add to homescreen for Chrome on Android -->
 	<meta name="mobile-web-app-capable" content="yes">
 	<link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-	<!-- Add to homescreen for Safari on iOS -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="Material Design Lite">
 	<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-	<!-- Tile icon for Win8 (144x144 + tile color) -->
 	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
 	<meta name="msapplication-TileColor" content="#3372DF">
-
 	<link rel="shortcut icon" href="images/favicon.png">
-
-	<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-	<!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"> -->
 	<link href="<?php echo base_url();?>assets/css/icon.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/material.min.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/styles.css">
@@ -69,11 +55,11 @@
           </div>
 			</header>
 			<nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-				<a class="mdl-navigation__link" href="<?php echo base_url();?>index.php/crud/lihat_data">
+				<a class="mdl-navigation__link" href="<?php echo base_url();?>index.php/c_crud/lihat_data">
 					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Dashboard</a>
 				<a class="mdl-navigation__link" href="<?php echo base_url();?>">
 					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>Input Data</a>
-				<a class="mdl-navigation__link" href="<?php echo base_url();?>index.php/crud/export_data">
+				<a class="mdl-navigation__link" href="<?php echo base_url();?>index.php/c_crud/export_data">
 					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">cloud_download</i>Export Data</a>
 				<div class="mdl-layout-spacer"></div>
 			</nav>

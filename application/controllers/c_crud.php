@@ -1,21 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class crud extends CI_Controller {
+class c_crud extends CI_Controller {
 
 	public function __construct(){
       parent:: __construct();
   	}
 
-	public function index()
-	{
+	public function index(){
 		$this->load->view('templates/header');
-		$this->load->view('index');
+		$this->load->view('v_input');
 		$this->load->view('templates/footer');
 	}
 
-	public function tambah_data()
-	{
+	public function tambah_data(){
 
 		$nama 			= $_POST['nama'];
 		$umur			= $_POST['umur'];
@@ -65,38 +63,37 @@ class crud extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function lihat_data()
-	{
-		$this->load->model('Model');
-		$data	= $this->Model->select();
+	public function lihat_data(){
+		$this->load->model('m_crud');
+		$data	= $this->m_crud->select();
 		$data2	= $this->db->count_all('survey');
-		$nilai	= $this->Model->jumlahdata();
+		$nilai	= $this->m_crud->jumlahdata();
 		
 		$this->load->view('templates/header');
-		$this->load->view('dashboard',array('data' => $data, 'data2' => $data2, 'nilai' => $nilai));
+		$this->load->view('admin/v_dashboard',array('data' => $data, 'data2' => $data2, 'nilai' => $nilai));
 		$this->load->view('templates/footer');
 	}
 
 	public function detail_data(){
 		$id = $this->uri->segment(3);
 		
-		$this->load->model('Model');
-		$data = $this->Model->select_where($id);
-		$nilai = $this->Model->jumlahdata_where($id);
+		$this->load->model('m_crud');
+		$data = $this->m_crud->select_where($id);
+		$nilai = $this->m_crud->jumlahdata_where($id);
 
 		$this->load->view('templates/header');
-		$this->load->view('detail',array('data' => $data, 'nilai' => $nilai));
+		$this->load->view('v_detail',array('data' => $data, 'nilai' => $nilai));
 		$this->load->view('templates/footer');
 	}
 
 	public function delete_data(){
 		$id = $this->uri->segment(3);
 		
-		$this->load->model('Model');
-		$this->Model->delete_where($id);
-		$data = $this->Model->select();
+		$this->load->model('m_crud');
+		$this->crud->delete_where($id);
+		$data = $this->crud->select();
 
-		redirect(base_url().'index.php/crud/lihat_data');
+		redirect(base_url().'index.php/c_crud/lihat_data');
 	}
 
 	public function export_data(){

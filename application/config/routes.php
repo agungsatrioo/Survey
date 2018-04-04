@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'crud';
+$route['default_controller'] = 'c_crud';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route["members_area/(.*)"] = 'site/members_area/$1';
