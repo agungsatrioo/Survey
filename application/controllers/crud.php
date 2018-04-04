@@ -98,4 +98,14 @@ class crud extends CI_Controller {
 
 		redirect(base_url().'index.php/crud/lihat_data');
 	}
+
+	public function export_data(){
+		$this->load->dbutil();
+		$query = $this->db->query("SELECT nama,umur,jk,pt,pu,mudah,sesuai,pasti,disiplin,petugas,mampu,cepat,adil,sopan,wajar,sesuai2,tepat,nyaman,aman FROM survey");
+		header("Content-type: application/xls");
+		header("Content-Disposition: attachment; filename='Data.xls'");
+		header("Pragma: no-cache");
+		header("Expires: 0");
+		echo $this->dbutil->csv_from_result($query);
+	}
 }

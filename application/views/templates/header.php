@@ -73,6 +73,8 @@
 					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Dashboard</a>
 				<a class="mdl-navigation__link" href="<?php echo base_url();?>">
 					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>Input Data</a>
+				<a class="mdl-navigation__link" href="<?php echo base_url();?>index.php/crud/export_data">
+					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">cloud_download</i>Export Data</a>
 				<div class="mdl-layout-spacer"></div>
 			</nav>
 		</div>
