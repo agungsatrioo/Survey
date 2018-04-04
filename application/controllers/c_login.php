@@ -15,8 +15,8 @@ class c_login extends CI_Controller {
 	public function auth(){
 		$username	= htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
 		$password	= htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
-		$level		= $this->m_login->level($username);
 		$cek 		= $this->m_login->auth($username, $password);
+		$level		= $this->m_login->level($username);
 
 		if($cek->num_rows() > 0){
 			$data=$cek->row_array();
@@ -25,11 +25,7 @@ class c_login extends CI_Controller {
 			if($level == 1){
 				$this->session->set_userdata('akses','1');
 				redirect(base_url().'index.php/c_crud/lihat_data');
-			}else{
-				$this->session->set_userdata('akses','2');
-				$this->load->view('user/v_input');
 			}
-
         }else{
 			echo "<script>alert('Data tidak ada!');</script>";
 			$this->load->view('index');

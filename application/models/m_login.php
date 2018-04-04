@@ -7,5 +7,6 @@
 
         public function level($username){
             $query = $this->db->query("SELECT level FROM user WHERE username='$username'");
+            return $query->num_rows();
         }
     }

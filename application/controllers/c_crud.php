@@ -9,7 +9,7 @@ class c_crud extends CI_Controller {
 
 	public function index(){
 		$this->load->view('templates/header');
-		$this->load->view('v_input');
+		$this->load->view('admin/v_input');
 		$this->load->view('templates/footer');
 	}
 
@@ -82,7 +82,7 @@ class c_crud extends CI_Controller {
 		$nilai = $this->m_crud->jumlahdata_where($id);
 
 		$this->load->view('templates/header');
-		$this->load->view('v_detail',array('data' => $data, 'nilai' => $nilai));
+		$this->load->view('admin/v_detail',array('data' => $data, 'nilai' => $nilai));
 		$this->load->view('templates/footer');
 	}
 
