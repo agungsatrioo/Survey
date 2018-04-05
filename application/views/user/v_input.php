@@ -87,7 +87,7 @@
 					<h3>Form Pengisian Survey</h3>
 					<br>
 					<form action="<?php echo base_url();?>index.php/crud/tambah_data" method="post">
-						<h4>No Responden</h4>
+						<h4>Nomor Responden</h4>
 						<div class="mdl-textfield mdl-js-textfield mdl-cell--12-col">
 							<input class="mdl-textfield__input" name="nomor" id="nomor" type="text" pattern="([A-z\s]){2,}">
 							<label class="mdl-textfield__label" for="nomor">Masukan No Responden</label>
@@ -420,12 +420,10 @@
 							</label>
 						</div>
 
-
+						<br><br><br>
 						<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="" type="submit"
 						name="submit" value="Save">
 						<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="" type="reset" name="reset" value="RESET">
-						<br>
-						<br>
 					</form>
 				</div>
 			</div>

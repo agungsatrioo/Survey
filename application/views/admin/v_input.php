@@ -2,7 +2,7 @@
 	<div class="mdl-grid demo-content">
 		<div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" style="height:0%;">
 			<form action="<?php echo base_url();?>index.php/crud/tambah_data" method="post">
-				<h4>No Responden</h4>
+				<h4>Nomor Responden</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--12-col">
 					<input class="mdl-textfield__input" name="nomor" id="nomor" type="text" pattern="([A-z\s]){2,}">
 					<label class="mdl-textfield__label" for="nomor">Masukan No Responden</label>
@@ -124,33 +124,33 @@
 						<span class="mdl_radio__label">Sangat Sesuai</span>
 					</label>
 				</div>
-				
+
 				<h4>Bagaimana pemahaman Saudara tentang kemudahan prosedur pelayanan di unit ini?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tm">
-						<input class="mdl-radio__button" type="radio" name="kemudahan" id="tm" value="1" required>
+						<input class="mdl-radio__button" type="radio" name="pe" id="tm" value="1" required>
 						<span class="mdl_radio__label">Tidak Mudah</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="km">
-						<input class="mdl-radio__button" type="radio" name="kemudahan" id="km" value="2" required>
+						<input class="mdl-radio__button" type="radio" name="pe" id="km" value="2" required>
 						<span class="mdl_radio__label">Kurang Mudah</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="m">
-						<input class="mdl-radio__button" type="radio" name="kemudahan" id="m" value="3" required>
+						<input class="mdl-radio__button" type="radio" name="pe" id="m" value="3" required>
 						<span class="mdl_radio__label">Mudah</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sm">
-						<input class="mdl-radio__button" type="radio" name="kemudahan" id="sm" value="4" required>
+						<input class="mdl-radio__button" type="radio" name="pe" id="sm" value="4" required>
 						<span class="mdl_radio__label">Sangat Mudah</span>
 					</label>
 				</div>
-				
+
 				<h4>Bagaimana pendapat Saudara tentang kecepatan waktu dalam memberikan pelayanan?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kecepatan_tidak_cepat">
@@ -176,7 +176,7 @@
 						<span class="mdl_radio__label"="kecepatan_sangat_cepat">Sangat Cepat</span>
 					</label>
 				</div>
-				
+
 				<h4>Bagaimana pendapat Saudara tentang kewajaran biaya/tarif dalam pelayanan di Kecamatan Cinambo?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kewajaran_sangat_mahal">
@@ -202,8 +202,9 @@
 						<span class="mdl_radio__label"="kewajaran_gratis">Gratis</span>
 					</label>
 				</div>
-				
-				<h4>Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang diberikan?</h4>
+
+				<h4>Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil
+					yang diberikan?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesesuaian2_tidak_sesuai">
 						<input class="mdl-radio__button" type="radio" name="kesesuaian2" id="kesesuaian2_tidak_sesuai" value="1" required>
@@ -228,7 +229,7 @@
 						<span class="mdl_radio__label"="kesesuaian2_sangat_kesesuaian">Sangat Sesuai</span>
 					</label>
 				</div>
-				
+
 				<h4>Bagaimana pendapat saudara tentang kompetensi/kemampuan petugas dalam pelayanan?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kompetensi_tidak_kompeten">
@@ -254,8 +255,9 @@
 						<span class="mdl_radio__label"="kompetensi_sangat_kompeten">Sangat Kompeten</span>
 					</label>
 				</div>
-				
-				<h4>Bagaimana pendapat Saudara tentang perilaku petugas dalam pelayanan terkait kesopanan dan keramahan pelayanan di Kecamatan Cinambo ini?</h4>
+
+				<h4>Bagaimana pendapat Saudara tentang perilaku petugas dalam pelayanan terkait kesopanan dan keramahan pelayanan di Kecamatan
+					Cinambo ini?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kesopanan_tidak_sopan">
 						<input class="mdl-radio__button" type="radio" name="kesopanan" id="kesopanan_tidak_sopan" value="1" required>
@@ -280,7 +282,7 @@
 						<span class="mdl_radio__label"="kesopanan_sangat_sopan">Sangat Sopan dan Ramah</span>
 					</label>
 				</div>
-				
+
 				<h4>Bagaimana pendapat Saudara tentang kualitas sarana dan prasarana di Kecamatan Cinambo ini?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kualitas_buruk">
@@ -306,38 +308,39 @@
 						<span class="mdl_radio__label">Sangat Baik</span>
 					</label>
 				</div>
-				
+
 				<h4>Bagaimana pendapat Saudara tentang penanganan pengaduan layanan?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
-					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pengaduan_tidak_ada">
-						<input class="mdl-radio__button" type="radio" name="pengaduan" id="pengaduan_tidak_ada" value="1" required>
-						<span class="mdl_radio__label"="pengaduan_tidak_ada">Tidak Ada</span>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_tidak_ada">
+						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_tidak_ada" value="1" required>
+						<span class="mdl_radio__label"="penanganan_tidak_ada">Tidak Ada</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
-					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pengaduan_tidak_berfungsi">
-						<input class="mdl-radio__button" type="radio" name="pengaduan" id="pengaduan_tidak_berfungsi" value="2" required>
-						<span class="mdl_radio__label"="pengaduan_tidak_berfungsi">Ada, tetapi tidak berfungsi</span>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_tidak_berfungsi">
+						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_tidak_berfungsi" value="2" required>
+						<span class="mdl_radio__label"="penanganan_tidak_berfungsi">Ada, tetapi tidak berfungsi</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
-					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pengaduan_kurang_maksimal">
-						<input class="mdl-radio__button" type="radio" name="pengaduan" id="pengaduan_kurang_maksimal" value="3" required>
-						<span class="mdl_radio__label"="pengaduan_kurang_maksimal">Berfungsi kurang maksimal</span>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_kurang_maksimal">
+						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_kurang_maksimal" value="3" required>
+						<span class="mdl_radio__label"="penanganan_kurang_maksimal">Berfungsi kurang maksimal</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
-					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pengaduan_baik">
-						<input class="mdl-radio__button" type="radio" name="pengaduan" id="pengaduan_baik" value="4" required>
-						<span class="mdl_radio__label"="pengaduan_baik">Dikelola dengan baik</span>
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_baik">
+						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_baik" value="4" required>
+						<span class="mdl_radio__label"="penanganan_baik">Dikelola dengan baik</span>
 					</label>
 				</div>
 
-
+				<br>
+				<br>
+				<br>
 				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="" type="submit"
 				name="submit" value="Save">
 				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="" type="reset" name="reset" value="RESET">
-				<br><br>
 			</form>
 		</div>
 	</div>
