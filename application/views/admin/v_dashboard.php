@@ -45,7 +45,7 @@
 							<td><h1><?php 
 										if($data2 != 0){
 											foreach($nilai as $nilais){
-												$nil=round($nilais['jumlahdata']/(14*$data2),2); 
+												$nil=round($nilais['jumlahdata']/(9*$data2),2); 
 												echo $nil;  
 											}
 										}
@@ -123,7 +123,7 @@
 					</tr>
 					<tr>
 						<th width="10%" style="text-align:center;">NO</th>
-						<th width="30%" class="mdl-data-table__cell--non-numeric">Nama</th>
+						<th width="30%" class="mdl-data-table__cell--non-numeric">No. Responden</th>
 						<th width="15%" class="mdl-data-table__cell--non-numeric">Umur</th>
 						<th width="15%" class="mdl-data-table__cell--non-numeric">Jenis Kelamin</th>
 						<th width="10%" class="mdl-data-table__cell--non-numeric">Aksi</th>
@@ -137,13 +137,13 @@
 							<?php echo $i++?>
 						</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<?php echo $data['nama']?>
+							<?php echo $data['no_responden']?>
 						</td>
 						<td class="mdl-data-table__cell--non-numeric">
 							<?php echo $data['umur']?> tahun
 						</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<?php echo $data['jk']?>
+							<?php echo $data['jenis_kelamin']?>
 						</td>
 						<td class="mdl-data-table__cell--non-numeric">
 							<a class="mdl-color-text--blue-grey-500" href="<?php echo base_url().'index.php/c_crud/detail_data/'.$data['id']?>">

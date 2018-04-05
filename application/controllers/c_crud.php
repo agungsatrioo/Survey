@@ -32,33 +32,34 @@ class c_crud extends CI_Controller {
 		$kecepatan	 	= $_POST['kecepatan'];
 		$kewajaran 		= $_POST['kewajaran'];
 		$kesesuaian2 	= $_POST['kesesuaian2'];
-		$kompeten 		= $_POST['kompetensi'];
+		$kompeten 		= $_POST['kompeten'];
 		$kesopanan 		= $_POST['kesopanan'];
 		$kualitas 		= $_POST['kualitas'];
 		$pengaduan 		= $_POST['pengaduan'];
 
 		$data = array(
-			'nomor' 		=> $nomor,
-			'umur'			=> $umur,
-			'jk' 			=> $jk,
-			'pt' 			=> $pt,
-			'pu' 			=> $pu,
-			'mudah' 		=> $pe,
-			'sesuai' 		=> $kesesuaian,
-			'mudah' 		=> $kemudahan,
-			'cepat' 		=> $kecepatan,
-			'wajar' 		=> $kewajaran,
-			'sesuai2' 		=> $kesesuaian2,
-			'kompetensi' 	=> $kompeten,
-			'sopan' 		=> $kenyamanan,
-			'kualitas' 		=> $kualitas,
-			'pengaduan' 	=> $pengaduan,
+			'no_responden' 			=> $nomor,
+			'umur'					=> $umur,
+			'jenis_kelamin'			=> $jk,
+			'pendidikan_terakhir'	=> $pt,
+			'pekerjaan_utama'		=> $pu,
+			'tanggal' 				=> $tanggal,
+			'jenis_pelayanan'		=> $jenis,
+			'mudah' 				=> $kemudahan,
+			'sesuai' 				=> $kesesuaian,
+			'mudah' 				=> $kemudahan,
+			'cepat' 				=> $kecepatan,
+			'wajar' 				=> $kewajaran,
+			'sesuai2' 				=> $kesesuaian2,
+			'kompetensi' 			=> $kompeten,
+			'sopan' 				=> $kesopanan,
+			'kualitas' 				=> $kualitas,
+			'pengaduan' 			=> $pengaduan,
 		);
 
 		$this->db->insert('survey', $data);
-		$this->load->view('templates/header');
-		$this->load->view('index');
-		$this->load->view('templates/footer');
+		$url = base_url('index.php/c_crud/');
+		redirect($url);
 	}
 
 	public function lihat_data(){
@@ -102,7 +103,7 @@ class c_crud extends CI_Controller {
 
 	public function export_data(){
 		$this->load->dbutil();
-		$query = $this->db->query("SELECT nama,umur,jk,pt,pu,mudah,sesuai,pasti,disiplin,petugas,mampu,cepat,adil,sopan,wajar,sesuai2,tepat,nyaman,aman FROM survey");
+		$query = $this->db->query("SELECT no_responden,umur,jenis_kelamin,pendidikan_terakhir,pekerjaan_utama,tanggal,jenis_pelayanan,sesuai,mudah,cepat,wajar,sesuai2,kompetensi,sopan,kualitas,pengaduan FROM survey");
 		header("Content-type: application/xls");
 		header("Content-Disposition: attachment; filename='Data.xls'");
 		header("Pragma: no-cache");

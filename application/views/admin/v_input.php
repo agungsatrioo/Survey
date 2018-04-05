@@ -11,7 +11,7 @@
 
 				<h4>Umur</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--12-col">
-					<input class="mdl-textfield__input" name="umur" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="umur">
+					<input class="mdl-textfield__input" name="umur" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="umur" maxlength="3">
 					<label class="mdl-textfield__label" for="umur">Masukan Umur</label>
 					<span class="mdl-textfield__error">Masukan umur yang benar</span>
 				</div>
@@ -99,11 +99,11 @@
 					</label>
 				</div>
 
-				<input type="hidden" name="tanggal" value="<?php echo date("dmY");?>">
+				<input type="hidden" name="tanggal" value="<?php echo date("Y-m-d");?>">
 
 				<h4>Jenis Pelayanan</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--12-col">
-					<input class="mdl-textfield__input" name="jenis" id="jenis" type="text" required>
+					<input class="mdl-textfield__input" name="jenis" id="jenis" type="text">
 					<label class="mdl-textfield__label" for="jenis">Masukan Jenis Pelayanan</label>
 				</div>
 
@@ -320,25 +320,25 @@
 				<h4>Bagaimana pendapat Saudara tentang penanganan pengaduan layanan?</h4>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_tidak_ada">
-						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_tidak_ada" value="1" required>
+						<input class="mdl-radio__button" type="radio" name="pengaduan" id="penanganan_tidak_ada" value="1" required>
 						<span class="mdl_radio__label"="penanganan_tidak_ada">Tidak Ada</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_tidak_berfungsi">
-						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_tidak_berfungsi" value="2" required>
+						<input class="mdl-radio__button" type="radio" name="pengaduan" id="penanganan_tidak_berfungsi" value="2" required>
 						<span class="mdl_radio__label"="penanganan_tidak_berfungsi">Ada, tetapi tidak berfungsi</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_kurang_maksimal">
-						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_kurang_maksimal" value="3" required>
+						<input class="mdl-radio__button" type="radio" name="pengaduan" id="penanganan_kurang_maksimal" value="3" required>
 						<span class="mdl_radio__label"="penanganan_kurang_maksimal">Berfungsi kurang maksimal</span>
 					</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-cell--6-col">
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="penanganan_baik">
-						<input class="mdl-radio__button" type="radio" name="penanganan" id="penanganan_baik" value="4" required>
+						<input class="mdl-radio__button" type="radio" name="pengaduan" id="penanganan_baik" value="4" required>
 						<span class="mdl_radio__label"="penanganan_baik">Dikelola dengan baik</span>
 					</label>
 				</div>

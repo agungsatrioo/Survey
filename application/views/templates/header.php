@@ -39,13 +39,6 @@
 		<header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
 			<div class="mdl-layout__header-row">
 				<span class="mdl-layout-title">SURVEY TINGKAT KEPUASAN KECAMATAN CINAMBO</span>
-				<div class="mdl-layout-spacer"></div>
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-					<div class="mdl-textfield__expandable-holder">
-						<input class="mdl-textfield__input" type="text" id="search">
-						<label class="mdl-textfield__label" for="search">Enter your query...</label>
-					</div>
-				</div>
 			</div>
 		</header>
 		<div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
