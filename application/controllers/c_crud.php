@@ -8,53 +8,51 @@ class c_crud extends CI_Controller {
   	}
 
 	public function index(){
-		$this->load->view('templates/header');
-		$this->load->view('admin/v_input');
-		$this->load->view('templates/footer');
+		if($this->session->userdata('ses_username')){
+			$this->load->view('templates/header');
+			$this->load->view('admin/v_input');
+			$this->load->view('templates/footer');
+		}else{
+			$url = base_url('index.php/c_login/');
+			redirect($url);
+		}
 	}
 
 	public function tambah_data(){
 
-		$nama 			= $_POST['nama'];
+		$nomor 			= $_POST['nomor'];
 		$umur			= $_POST['umur'];
 		$jk 			= $_POST['jk'];
 		$pt 			= $_POST['pt'];
 		$pu 			= $_POST['pu'];
-		$pe 			= $_POST['pe'];
+		$tanggal 		= $_POST['tanggal'];
+		$jenis 			= $_POST['jenis'];
 		$kesesuaian 	= $_POST['kesesuaian'];
-		$kejelasan 		= $_POST['kejelasan'];
-		$kedisiplinan 	= $_POST['kedisiplinan'];
-		$petugas 		= $_POST['petugas'];
-		$pelayanan 		= $_POST['pelayanan'];
-		$kecepatan 		= $_POST['kecepatan'];
-		$keadilan 		= $_POST['keadilan'];
-		$kesopanan 		= $_POST['kesopanan'];
+		$kemudahan 		= $_POST['kemudahan'];
+		$kecepatan	 	= $_POST['kecepatan'];
 		$kewajaran 		= $_POST['kewajaran'];
 		$kesesuaian2 	= $_POST['kesesuaian2'];
-		$ketepatan 		= $_POST['ketepatan'];
-		$kenyamanan 	= $_POST['kenyamanan'];
-		$keamanan 		= $_POST['keamanan'];
+		$kompeten 		= $_POST['kompetensi'];
+		$kesopanan 		= $_POST['kesopanan'];
+		$kualitas 		= $_POST['kualitas'];
+		$pengaduan 		= $_POST['pengaduan'];
 
 		$data = array(
-			'nama' 		=> $nama,
-			'umur'		=> $umur,
-			'jk' 		=> $jk,
-			'pt' 		=> $pt,
-			'pu' 		=> $pu,
-			'mudah' 	=> $pe,
-			'sesuai' 	=> $kesesuaian,
-			'pasti' 	=> $kejelasan,
-			'disiplin' 	=> $kedisiplinan,
-			'petugas' 	=> $petugas,
-			'mampu' 	=> $pelayanan,
-			'cepat' 	=> $kecepatan,
-			'adil' 		=> $keadilan,
-			'sopan' 	=> $kesopanan,
-			'wajar' 	=> $kewajaran,
-			'sesuai2' 	=> $kesesuaian2,
-			'tepat' 	=> $ketepatan,
-			'nyaman' 	=> $kenyamanan,
-			'aman' 		=> $keamanan,
+			'nomor' 		=> $nomor,
+			'umur'			=> $umur,
+			'jk' 			=> $jk,
+			'pt' 			=> $pt,
+			'pu' 			=> $pu,
+			'mudah' 		=> $pe,
+			'sesuai' 		=> $kesesuaian,
+			'mudah' 		=> $kemudahan,
+			'cepat' 		=> $kecepatan,
+			'wajar' 		=> $kewajaran,
+			'sesuai2' 		=> $kesesuaian2,
+			'kompetensi' 	=> $kompeten,
+			'sopan' 		=> $kenyamanan,
+			'kualitas' 		=> $kualitas,
+			'pengaduan' 	=> $pengaduan,
 		);
 
 		$this->db->insert('survey', $data);
@@ -64,14 +62,20 @@ class c_crud extends CI_Controller {
 	}
 
 	public function lihat_data(){
-		$this->load->model('m_crud');
-		$data	= $this->m_crud->select();
-		$data2	= $this->db->count_all('survey');
-		$nilai	= $this->m_crud->jumlahdata();
-		
-		$this->load->view('templates/header');
-		$this->load->view('admin/v_dashboard',array('data' => $data, 'data2' => $data2, 'nilai' => $nilai));
-		$this->load->view('templates/footer');
+		if($this->session->userdata('ses_username')){
+			$this->load->model('m_crud');
+			$data	= $this->m_crud->select();
+			$data2	= $this->db->count_all('survey');
+			$nilai	= $this->m_crud->jumlahdata();
+			
+			$this->load->view('templates/header');
+			$this->load->view('admin/v_dashboard',array('data' => $data, 'data2' => $data2, 'nilai' => $nilai));
+			$this->load->view('templates/footer');
+		}
+		else{
+			$url = base_url('index.php/c_login/');
+			redirect($url);
+		}
 	}
 
 	public function detail_data(){

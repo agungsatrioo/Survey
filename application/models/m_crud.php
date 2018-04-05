@@ -12,10 +12,10 @@
             $this->db->query("DELETE FROM survey WHERE id=$id"); }
 
         public function jumlahdata_where($id){
-            $query = $this->db->query("SELECT SUM(mudah)+SUM(sesuai)+SUM(pasti)+SUM(disiplin)+SUM(petugas)+SUM(mampu)+SUM(cepat)+SUM(adil)+SUM(sopan)+SUM(wajar)+SUM(sesuai2)+SUM(tepat)+SUM(nyaman)+SUM(aman) AS jumlahdata FROM survey WHERE id=$id");
+            $query = $this->db->query("SELECT SUM(sesuai)+SUM(mudah)+SUM(cepat)+SUM(wajar)+SUM(sesuai2)+SUM(kompetensi)+SUM(sopan)+SUM(kualitas)+SUM(pengaduan) AS jumlahdata FROM survey WHERE id=$id");
             return $query->result_array(); }
 
         public function jumlahdata(){
-            $query = $this->db->query("SELECT SUM(mudah)+SUM(sesuai)+SUM(pasti)+SUM(disiplin)+SUM(petugas)+SUM(mampu)+SUM(cepat)+SUM(adil)+SUM(sopan)+SUM(wajar)+SUM(sesuai2)+SUM(tepat)+SUM(nyaman)+SUM(aman) AS jumlahdata FROM survey");
+            $query = $this->db->query("SELECT SUM(sesuai)+SUM(mudah)+SUM(cepat)+SUM(wajar)+SUM(sesuai2)+SUM(kompetensi)+SUM(sopan)+SUM(kualitas)+SUM(pengaduan) AS jumlahdata FROM survey");
             return $query->result_array();}
     }
