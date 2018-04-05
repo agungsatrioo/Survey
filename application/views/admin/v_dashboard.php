@@ -57,6 +57,21 @@
                               </div>
                                 </div>
                             </td>
+							<td><br></td>
+						</tr>
+						<tr>
+							<td><h5>INDEKS NILAI</h5></td>
+						</tr>
+						<tr>
+							<td><h1><?php 
+										if($data2 != 0){
+											foreach($nilai as $nilais){
+												$nil=round($nilais['jumlahdata']/(9*$data2),2); 
+												echo $nil;  
+											}
+										}
+                                    ?>
+                                </h1></td
 						</tr>
 					</table>
 				</div>

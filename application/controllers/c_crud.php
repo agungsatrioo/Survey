@@ -8,70 +8,75 @@ class c_crud extends CI_Controller {
   	}
 
 	public function index(){
-		$this->load->view('templates/header');
-		$this->load->view('admin/v_input');
-		$this->load->view('templates/footer');
+		if($this->session->userdata('ses_username')){
+			$this->load->view('templates/header');
+			$this->load->view('admin/v_input');
+			$this->load->view('templates/footer');
+		}else{
+			$url = base_url('index.php/c_login/');
+			redirect($url);
+		}
 	}
 
 	public function tambah_data(){
 
-		$nama 			= $_POST['nama'];
+		$nomor 			= $_POST['nomor'];
 		$umur			= $_POST['umur'];
 		$jk 			= $_POST['jk'];
 		$pt 			= $_POST['pt'];
 		$pu 			= $_POST['pu'];
-		$pe 			= $_POST['pe'];
+		$tanggal 		= $_POST['tanggal'];
+		$jenis 			= $_POST['jenis'];
 		$kesesuaian 	= $_POST['kesesuaian'];
-		$kejelasan 		= $_POST['kejelasan'];
-		$kedisiplinan 	= $_POST['kedisiplinan'];
-		$petugas 		= $_POST['petugas'];
-		$pelayanan 		= $_POST['pelayanan'];
-		$kecepatan 		= $_POST['kecepatan'];
-		$keadilan 		= $_POST['keadilan'];
-		$kesopanan 		= $_POST['kesopanan'];
+		$kemudahan 		= $_POST['kemudahan'];
+		$kecepatan	 	= $_POST['kecepatan'];
 		$kewajaran 		= $_POST['kewajaran'];
 		$kesesuaian2 	= $_POST['kesesuaian2'];
-		$ketepatan 		= $_POST['ketepatan'];
-		$kenyamanan 	= $_POST['kenyamanan'];
-		$keamanan 		= $_POST['keamanan'];
+		$kompeten 		= $_POST['kompeten'];
+		$kesopanan 		= $_POST['kesopanan'];
+		$kualitas 		= $_POST['kualitas'];
+		$pengaduan 		= $_POST['pengaduan'];
 
 		$data = array(
-			'nama' 		=> $nama,
-			'umur'		=> $umur,
-			'jk' 		=> $jk,
-			'pt' 		=> $pt,
-			'pu' 		=> $pu,
-			'mudah' 	=> $pe,
-			'sesuai' 	=> $kesesuaian,
-			'pasti' 	=> $kejelasan,
-			'disiplin' 	=> $kedisiplinan,
-			'petugas' 	=> $petugas,
-			'mampu' 	=> $pelayanan,
-			'cepat' 	=> $kecepatan,
-			'adil' 		=> $keadilan,
-			'sopan' 	=> $kesopanan,
-			'wajar' 	=> $kewajaran,
-			'sesuai2' 	=> $kesesuaian2,
-			'tepat' 	=> $ketepatan,
-			'nyaman' 	=> $kenyamanan,
-			'aman' 		=> $keamanan,
+			'no_responden' 			=> $nomor,
+			'umur'					=> $umur,
+			'jenis_kelamin'			=> $jk,
+			'pendidikan_terakhir'	=> $pt,
+			'pekerjaan_utama'		=> $pu,
+			'tanggal' 				=> $tanggal,
+			'jenis_pelayanan'		=> $jenis,
+			'mudah' 				=> $kemudahan,
+			'sesuai' 				=> $kesesuaian,
+			'mudah' 				=> $kemudahan,
+			'cepat' 				=> $kecepatan,
+			'wajar' 				=> $kewajaran,
+			'sesuai2' 				=> $kesesuaian2,
+			'kompetensi' 			=> $kompeten,
+			'sopan' 				=> $kesopanan,
+			'kualitas' 				=> $kualitas,
+			'pengaduan' 			=> $pengaduan,
 		);
 
 		$this->db->insert('survey', $data);
-		$this->load->view('templates/header');
-		$this->load->view('index');
-		$this->load->view('templates/footer');
+		$url = base_url('index.php/c_crud/');
+		redirect($url);
 	}
 
 	public function lihat_data(){
-		$this->load->model('m_crud');
-		$data	= $this->m_crud->select();
-		$data2	= $this->db->count_all('survey');
-		$nilai	= $this->m_crud->jumlahdata();
-		
-		$this->load->view('templates/header');
-		$this->load->view('admin/v_dashboard',array('data' => $data, 'data2' => $data2, 'nilai' => $nilai));
-		$this->load->view('templates/footer');
+		if($this->session->userdata('ses_username')){
+			$this->load->model('m_crud');
+			$data	= $this->m_crud->select();
+			$data2	= $this->db->count_all('survey');
+			$nilai	= $this->m_crud->jumlahdata();
+			
+			$this->load->view('templates/header');
+			$this->load->view('admin/v_dashboard',array('data' => $data, 'data2' => $data2, 'nilai' => $nilai));
+			$this->load->view('templates/footer');
+		}
+		else{
+			$url = base_url('index.php/c_login/');
+			redirect($url);
+		}
 	}
 
 	public function detail_data(){
@@ -98,7 +103,7 @@ class c_crud extends CI_Controller {
 
 	public function export_data(){
 		$this->load->dbutil();
-		$query = $this->db->query("SELECT nama,umur,jk,pt,pu,mudah,sesuai,pasti,disiplin,petugas,mampu,cepat,adil,sopan,wajar,sesuai2,tepat,nyaman,aman FROM survey");
+		$query = $this->db->query("SELECT no_responden,umur,jenis_kelamin,pendidikan_terakhir,pekerjaan_utama,tanggal,jenis_pelayanan,sesuai,mudah,cepat,wajar,sesuai2,kompetensi,sopan,kualitas,pengaduan FROM survey");
 		header("Content-type: application/xls");
 		header("Content-Disposition: attachment; filename='Data.xls'");
 		header("Pragma: no-cache");
