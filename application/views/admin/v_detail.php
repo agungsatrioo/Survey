@@ -16,7 +16,7 @@
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
 			<div class="mdl-card__title mdl-color--blue-grey-900 ">
 				<h2 class="mdl-card__title-text">
-					<?php echo $data['nama']; ?>
+					<?php echo $data['no_responden']; ?>
 				</h2>
 			</div>
 			<div class="mdl-card__supporting-text">
@@ -25,7 +25,7 @@
 						<td>Jenis Kelamin</td>
 						<td>:</td>
 						<td>
-							<?php echo $data['jk'];?>
+							<?php echo $data['jenis_kelamin'];?>
 						</td>
 					</tr>
 					<tr>
@@ -39,54 +39,67 @@
 						<td>Pendidikan</td>
 						<td>:</td>
 						<td>
-							<?php echo $data['pt'];?>
+							<?php echo $data['pendidikan_terakhir'];?>
 						</td>
 					</tr>
 					<tr>
 						<td>Pekerjaan</td>
 						<td>:</td>
 						<td>
-							<?php echo $data['pu'];?>
+							<?php echo $data['pekerjaan_utama'];?>
 						</td>
 					</tr>
 				</table>
 			</div>
 		</div>
-        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
 						<tr>
-							<td><br></td>
+							<td>
+								<br>
+							</td>
 						</tr>
 						<tr>
-							<td><h5>INDEKS NILAI</h5></td>
+							<td>
+								<h5>INDEKS NILAI</h5>
+							</td>
 						</tr>
 						<tr>
-                            <td><h1><?php 
+							<td>
+								<h1>
+									<?php 
                                             foreach($nilai as $nilais){
-                                                $nil=round($nilais['jumlahdata']/14,2); 
+                                                $nil=round($nilais['jumlahdata']/9,2); 
                                                 echo $nil;  
                                             }
                                     ?>
-                                </h1></td>
+								</h1>
+							</td>
 						</tr>
 					</table>
 				</div>
 			</div>
 		</div>
-        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
 						<tr>
-							<td><br></td>
+							<td>
+								<br>
+							</td>
 						</tr>
 						<tr>
-							<td><h5>INDEKS NILAI</h5></td>
+							<td>
+								<h5>INDEKS NILAI</h5>
+							</td>
 						</tr>
 						<tr>
-                            <td><h1><?php
+							<td>
+								<h1>
+									<?php
                                 if($nil > 1.00 && $nil <= 2.5996){
                                     $mutu = "D";
                                     $kinerja = "Tidak Baik";
@@ -104,26 +117,36 @@
                                     $kinerja = "Sangat Baik";
                                 }
                                 echo $mutu;
-                            ?></h1></td>
+                            ?>
+								</h1>
+							</td>
 						</tr>
 					</table>
 				</div>
 			</div>
 		</div>
-        <div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
+		<div class="mdl-card mdl-shadow--2dp mdl-color--blue-grey-600 mdl-color-text--white mdl-cell mdl-cell--3-col">
 			<div class="mdl-grid demo-content">
 				<div style="text-align:center;">
 					<table>
 						<tr>
-							<td><br></td>
+							<td>
+								<br>
+							</td>
 						</tr>
 						<tr>
-							<td><h5>INDEKS NILAI</h5></td>
+							<td>
+								<h5>INDEKS NILAI</h5>
+							</td>
 						</tr>
 						<tr>
-                            <td><h1><?php
+							<td>
+								<h1>
+									<?php
                                 echo $kinerja;
-                            ?></h1></td>
+                            ?>
+								</h1>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -131,47 +154,20 @@
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
 			<div class="mdl-card__title mdl-color--blue-grey-900">
-                <h2 class="mdl-card__title-text">Hasil Survey</h2>
+				<h2 class="mdl-card__title-text">Hasil Survey</h2>
 			</div>
 			<div class="mdl-card__supporting-text">
-                <ul class="demo-list-icon mdl-list">
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kemudahan prosedur/pelayanan di Kecamatan Cinambo</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['mudah'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Mudah</span></span>';
-                                                                        else if($data['mudah'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Mudah</span></span>';
-                                                                        else if($data['mudah'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Mudah</span></span>';
-                                                                        else if($data['mudah'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Mudah</span></span>';
-                                                                    ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kesesuaian persyaratan pelayanan dengan jenis pelayanannya</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
+				<ul class="demo-list-icon mdl-list">
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Kesesuaian persyaratan dengan jenis pelayanannya di Kecamatan Cinambo</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
                                                                         if($data['sesuai'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
                                     <span class="mdl-chip__text">Tidak Sesuai</span></span>';
@@ -185,129 +181,52 @@
                                     <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Sesuai</span></span>';
                                                                     ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kepastian persyaratan pelayanan dengan jenis pelayanannya</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Kemudahan prosedur pelayanan</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
+                                                                        if($data['mudah'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
+                                    <span class="mdl-chip__text">Tidak Mudah</span></span>';
+                                                                        else if($data['mudah'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
+                                    <span class="mdl-chip__text">Kurang Mudah</span></span>';
+                                                                        else if($data['mudah'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
+                                    <span class="mdl-chip__text">Mudah</span></span>';
+                                                                        else if($data['mudah'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
+                                    <span class="mdl-chip__text">Sangat Mudah</span></span>';
+                                                                    ?>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Kecepatan waktu dalam memberikan pelayanan</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
 
-                                                                    <?php 
-                                                                        if($data['pasti'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Pasti</span></span>';
-                                                                        else if($data['pasti'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Pasti</span></span>';
-                                                                        else if($data['pasti'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Pasti</span></span>';
-                                                                        else if($data['pasti'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Pasti</span></span>';
-                                                                    ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kedisiplinan petugas dalam membantu pelayanan</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['disiplin'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Disiplin</span></span>';
-                                                                        else if($data['disiplin'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Disiplin</span></span>';
-                                                                        else if($data['disiplin'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Disiplin</span></span>';
-                                                                        else if($data['disiplin'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Disiplin</span></span>';
-                                                                    ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Tanggung Jawab petugas dalam memberikan pelayanan</h4>
-                                                                    <?php 
-                                                                        if($data['petugas'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Bertanggung Jawab</span></span>';
-                                                                        else if($data['petugas'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Bertanggung Jawab</span></span>';
-                                                                        else if($data['petugas'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Bertanggung Jawab</span></span>';
-                                                                        else if($data['petugas'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Bertanggung Jawab</span></span>';
-                                                                    ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kemampuan petugas dalam memberikan pelayanan</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['mampu'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Mampu</span></span>';
-                                                                        else if($data['mampu'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Mampu</span></span>';
-                                                                        else if($data['mampu'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Mampu</span></span>';
-                                                                        else if($data['mampu'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Mampu</span></span>';
-                                                                    ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kecepatan pelayanan di Kecamatan Cinambo ini</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
+									<?php 
                                                                         if($data['cepat'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
                                     <span class="mdl-chip__text">Tidak Cepat</span></span>';
@@ -321,101 +240,47 @@
                                     <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Cepat</span></span>';
                                                                     ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Keadilan untuk mendapatkan pelayanan di Kecamatan Cinambo</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['adil'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Adil</span></span>';
-                                                                        else if($data['adil'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Adil</span></span>';
-                                                                        else if($data['adil'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Adil</span></span>';
-                                                                        else if($data['adil'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Adil</span></span>';
-                                                                    ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kesopanan dan keramahan dalam mendapatkan pelayanan</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['sopan'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Sopan</span></span>';
-                                                                        else if($data['sopan'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Sopan</span></span>';
-                                                                        else if($data['sopan'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Sopan</span></span>';
-                                                                        else if($data['sopan'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
-                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Sopan</span></span>';
-                                                                    ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kewajaran biaya untuk mendapatkan pelayanan</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Kewajaran biaya/tarif dalam pelayanan di Kecamatan Cinambo</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
                                                                         if($data['wajar'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Wajar</span></span>';
+                                    <span class="mdl-chip__text">Sangat Mahal</span></span>';
                                                                         else if($data['wajar'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Wajar</span></span>';
+                                    <span class="mdl-chip__text">Cukup Mahal</span></span>';
                                                                         else if($data['wajar'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Wajar</span></span>';
+                                    <span class="mdl-chip__text">Murah</span></span>';
                                                                         else if($data['wajar'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Wajar</span></span>';
+                                    <span class="mdl-chip__text">Gratis</span></span>';
                                                                     ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kesesuaian antara biaya yang dibayarkan dengan biaya yang telah ditetapkan</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang diberikan</h4>
+									<?php 
                                                                         if($data['sesuai2'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
                                     <span class="mdl-chip__text">Tidak Sesuai</span></span>';
@@ -429,93 +294,132 @@
                                     <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
                                     <span class="mdl-chip__text">Sangat Sesuai</span></span>';
                                                                     ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Ketepatan pelaksanaan terhadap jadwal waktu pelaksanaan</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['tepat'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Kompetensi/kemampuan petugas dalam pelayanan</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
+                                                                        if($data['kompetensi'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Tepat</span></span>';
-                                                                        else if($data['tepat'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Tidak Kompeten</span></span>';
+                                                                        else if($data['kompetensi'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Tepat</span></span>';
-                                                                        else if($data['tepat'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Kurang Kompeten</span></span>';
+                                                                        else if($data['kompetensi'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Tepat</span></span>';
-                                                                        else if($data['tepat'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Kompeten</span></span>';
+                                                                        else if($data['kompetensi'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Tepat</span></span>';
+                                    <span class="mdl-chip__text">Sangat Kompeten</span></span>';
                                                                     ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Kenyamanan pelayanan di Kecamatan Cinambo</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['nyaman'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Perilaku petugas dalam pelayanan terkait kesopanan dan keramahan pelayanan di Kecamatan Cinambo</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
+                                                                        if($data['sopan'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Nyaman</span></span>';
-                                                                        else if($data['nyaman'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Tidak Sopan dan Ramah</span></span>';
+                                                                        else if($data['sopan'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Nyaman</span></span>';
-                                                                        else if($data['nyaman'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Kurang Sopan dan Ramah</span></span>';
+                                                                        else if($data['sopan'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Nyaman</span></span>';
-                                                                        else if($data['nyaman'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Sopan dan Ramah</span></span>';
+                                                                        else if($data['sopan'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Nyaman</span></span>';
+                                    <span class="mdl-chip__text">Sangat Sopan dan Ramah</span></span>';
                                                                     ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li><br><hr>
-                    <li class="mdl-list__item">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>Keamanan pelayanan di Kecamatan Cinambo</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                                                    <?php 
-                                                                        if($data['aman'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Kualitas sarana dan prasarana di Kecamatan Cinambo</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
+                                                                        if($data['kualitas'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
-                                    <span class="mdl-chip__text">Tidak Aman</span></span>';
-                                                                        else if($data['aman'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Buruk</span></span>';
+                                                                        else if($data['kualitas'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
-                                    <span class="mdl-chip__text">Kurang Aman</span></span>';
-                                                                        else if($data['aman'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Cukup</span></span>';
+                                                                        else if($data['kualitas'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
-                                    <span class="mdl-chip__text">Aman</span></span>';
-                                                                        else if($data['aman'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__text">Baik</span></span>';
+                                                                        else if($data['kualitas'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
                                     <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
-                                    <span class="mdl-chip__text">Sangat Aman</span></span>';
+                                    <span class="mdl-chip__text">Sangat Baik</span></span>';
                                                                     ?>
-                                </td>
-                            </tr>
-                        </table>
-                    </li>
-                </ul>
-            </div>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<hr>
+					<li class="mdl-list__item">
+						<table>
+							<tr>
+								<td>
+									<h4>Penanganan pengaduan layanan</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php 
+                                                                        if($data['pengaduan'] == 1) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">1</span>
+                                    <span class="mdl-chip__text">Tidak Ada</span></span>';
+                                                                        else if($data['pengaduan'] == 2) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--orange mdl-color-text--white">2</span>
+                                    <span class="mdl-chip__text">Ada, tetapi tidak berfungsi</span></span>';
+                                                                        else if($data['pengaduan'] == 3) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--lime mdl-color-text--white">3</span>
+                                    <span class="mdl-chip__text">Berfungsi kurang maksimal</span></span>';
+                                                                        else if($data['pengaduan'] == 4) echo '<span class="mdl-chip mdl-chip--contact">
+                                    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
+                                    <span class="mdl-chip__text">Dikelola dengan baik</span></span>';
+                                                                    ?>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </main>

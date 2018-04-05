@@ -108,11 +108,11 @@
 						<div class="mdl-card__supporting-text">
 							<form action="<?php echo base_url();?>index.php/c_login/auth" method="post">
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input class="mdl-textfield__input" id="login" name="username"/>
+								<input class="mdl-textfield__input" id="login" name="username_sistik"/>
 								<label class="mdl-textfield__label" for="login">Username</label>
 							</div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input class="mdl-textfield__input" type="password" id="password" name="password"/>
+								<input class="mdl-textfield__input" type="password" id="password" name="password_sistik"/>
 								<label class="mdl-textfield__label" for="password">Password</label>
 							</div><br><br>
 							<button type="submit" name="submit" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
